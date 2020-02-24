@@ -5,21 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
-export class CalculadoraComponent implements OnInit {
+export class CalculadoraComponent{
 
-  titulo:string="Calculadora con Angular";
-  resultado:number=0;
-  operandoA:number=0;
-  operandoB:number=0;
+  titulo = "Calculadora con Angular";
+  
+  resultado: number;
 
-  constructor() { 
-
+  onResultado(resultado: number){
+    this.resultado = resultado;
   }
 
-  ngOnInit() {
-  }
-
-  getResultado():void{
-    this.resultado = this.operandoA + this.operandoB;
-  }
+ 
 }
